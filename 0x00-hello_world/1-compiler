@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S $CFILE -o age.o
+gcc -C $CFILE -o age.o
