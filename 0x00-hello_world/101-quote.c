@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	int len = sizeof("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
+	int ln = sizeof("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
 
-	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", len);
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", ln);
 	return (1);
 }
