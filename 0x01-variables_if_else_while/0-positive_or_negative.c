@@ -2,14 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 /**
-* main - entry point of the program
+* main - entry point of the program that generates a random number and prints whether the number is positive, or negative or zero
 *
-* Return: Always 0 (Success)
-**/
-
-/*
- * main - generates a random number and prints whether the number is positive, or negative or zero
- */
+* Retun: Always 0 (Success)
+*/
 int main(void)
 {
 	int n;
