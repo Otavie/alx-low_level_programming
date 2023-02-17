@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
-* main - entry point of the program that generates a random number and prints whether the number is positive, or negative or zero
+* main - entry point of the program
 *
 * Return: Always 0 (Success)
 */
