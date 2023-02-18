@@ -2,10 +2,12 @@
 /**
 * main - entry point of the program
 *
-* Return 0: indicates success
+* Return: Always 0 (Success)
 **/
 int main(void)
 {
-return (0);
-}
+	printf("0123456789");
+	putchar('\n');
 
+	return (0);
+}
