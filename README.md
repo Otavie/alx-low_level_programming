@@ -33,6 +33,17 @@ This is a task about variables and conditional statements in C. At the end of th
 - what values are considered TRUE and FALSE in C
 
 
+### 0x02. C - FUNCTIONS, NESTED LOOPS
+#### FUNCTIONS, FOR LOOP, WHILE LOOPS
+This is a task about writing functions and nested loops in C. At the end of the task, learners will be able to:
+- understand what nested loops are 
+- use nested loops
+- differentiate between a declaration and a definition of a function
+- explain what a prototype is
+- explain what scope of variables is
+
+
+
 
 
 
