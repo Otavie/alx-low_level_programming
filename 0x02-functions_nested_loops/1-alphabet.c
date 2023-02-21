@@ -1,3 +1,5 @@
+#include "main.h"
+
 /*
  * main - entry point of the program
  *
@@ -9,8 +11,8 @@ void print_alphabet(void)
 
 	for (l = 'a'; l <= 'z'; l++)
 	{
-		_putchar('l');
+		_putchar(l);
 	}
 
-	return (0);
+	_putchar('\n');
 }
