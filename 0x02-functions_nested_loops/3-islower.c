@@ -1,1 +1,16 @@
-/*\n* main - entry point of the program\n*\n* Return: Always 0 (Success)\n*/\n\nint main(void)\n{\n\nreturn (0);\n}
+#include "main.h"
+
+/**
+ * _islower - a program that checks for lowercase character.
+ */
+int _islower(int c)
+{
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
