@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * tie_table - a function that prints the 9 times table.
+ * times_table - a function that prints the 9 times table.
  * Return: Always 0 (Success).
  */
 void times_table(void)
