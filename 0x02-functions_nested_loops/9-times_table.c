@@ -2,24 +2,26 @@
 #include <stdio.h>
 
 /**
- * jack_bauer - a function that prints every minute of the day.
+ * tie_table - a function that prints the 9 times table.
  * Return: Always 0 (Success).
  */
 void times_table(void)
 {
-	int x, y;
+	int x, y, result;
 
 	for (x = 0; x <= 9; x++)
 	{
 		for (y = 0; y <= 9; y++)
 		{
-			if (y == 0)
+			result = x * y;
+
+			if (result < 10)
 			{
-				printf("%d", x * y);
+				printf(" %d ", result);
 			}
 			else
 			{
-				printf(",\t%d", x * y);
+				printf("%d,  ", result);
 			}
 		}
 		printf("\n");
