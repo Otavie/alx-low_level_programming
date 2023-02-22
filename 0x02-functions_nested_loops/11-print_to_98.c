@@ -4,7 +4,6 @@
 /**
  * print_to_98 - a function that prints all natural number from n to 98.
  * @n: The starting point of the printing.
- * @i: A counter
  * Return: Always 0 (Success).
  */
 void print_to_98(int n)
