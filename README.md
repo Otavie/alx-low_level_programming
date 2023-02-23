@@ -46,7 +46,9 @@ This directory contains tasks about writing functions and nested loops in C. At 
 ### 0x04. C - MORE FUNCTION, MORE NESTED LOOPS
 #### FUNCTIONS, WHILE LOOPS, FOR LOOPS, IF AND IF/ELSE STATEMENTS
 This directory conatins more tasks on functions, while and for loops and if/else statements. At the end of all the taskes in this directory, learners will be able to:
-- 
+- understand what nested loops are better
+- understand what header files and be able to use the #include command
+- undertsnad how to use while and for loops, if and if/else statements
 
 
 
