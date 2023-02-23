@@ -2,7 +2,7 @@
 
 /**
  * print_diagonal - a function that draws a diagonal line
- * @n: Number of the times the character _ will be printed
+ * @n: number of the times _ will be printed
  */
 
 void print_diagonal(int n)
@@ -17,7 +17,7 @@ void print_diagonal(int n)
 			{
 				_putchar(' ');
 			}
-			_putchar('*');
+			_putchar('\\');
 			_putchar('\n');
 		}
 	}
