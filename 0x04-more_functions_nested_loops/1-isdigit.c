@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _isupper - a function that checks for a digit (0 through 9)
+ * _isupper - a program that checks for a digit (0 through 9)
  * @c: character to be checked
- * Return: 1 if the character is digit, 0 otherwise
+ * Return: 1 if digit, 0 otherwise
  */
 int _isdigit(int c)
 {
