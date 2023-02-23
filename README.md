@@ -4,7 +4,7 @@ This repo contains projects about C programming
 
 ### TASK 0x00. C - HELLO, WORLD
 #### GCC, ENTRY POINT, HEADER, BETTY-STYLE
-This is a task about introduction of C programming language. At the end of the task, learners will be able to:
+This directory contains tasks about introduction of C programming language. At the end of the tasks in this directory, learners will be able to:
 - explain what entry point is
 - compile with gcc
 - know the name of the default program when compiling with gcc
@@ -18,7 +18,7 @@ This is a task about introduction of C programming language. At the end of the t
 
 ### TASK 0x01. C - VARIABLES, IF, ELSE, WHILE
 #### VARIABLE DECLARATION AND ASSIGNMENT, OPERATORS, CONDITIONAL STATMENTS, LOOPS
-This is a task about variables and conditional statements in C. At the end of the task, learners will be able to:
+This directory contains tasks about variables and conditional statements in C. At the end of the tasks in this directory, learners will be able to:
 - understand what variable is and how to define variables using char, int, unsigned int, etc.
 - do variable assign values to variables
 - print the values assigned to variables uisng printf
@@ -34,8 +34,8 @@ This is a task about variables and conditional statements in C. At the end of th
 
 
 ### 0x02. C - FUNCTIONS, NESTED LOOPS
-#### FUNCTIONS, FOR LOOP, WHILE LOOPS
-This is a task about writing functions and nested loops in C. At the end of the task, learners will be able to:
+#### FUNCTIONS, FOR LOOPS, WHILE LOOPS, IF AND IF/ELSE STATEMENTS
+This directory contains tasks about writing functions and nested loops in C. At the end of the tasks in this directory, learners will be able to:
 - understand what nested loops are 
 - use nested loops
 - differentiate between a declaration and a definition of a function
@@ -43,6 +43,10 @@ This is a task about writing functions and nested loops in C. At the end of the 
 - explain what scope of variables is
 
 
+### 0x04. C - MORE FUNCTION, MORE NESTED LOOPS
+#### FUNCTIONS, WHILE LOOPS, FOR LOOPS, IF AND IF/ELSE STATEMENTS
+This directory conatins more tasks on functions, while and for loops and if/else statements. At the end of all the taskes in this directory, learners will be able to:
+- 
 
 
 
