@@ -4,7 +4,6 @@
  * main - entry point of the program
  *
  * Return: Always 0 (Success)
- *
  */
 
 void print_fizz_buzz(void);
