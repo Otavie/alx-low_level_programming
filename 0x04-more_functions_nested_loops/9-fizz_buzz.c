@@ -2,7 +2,7 @@
 
 /**
  * main - entry point of the program
- * print_fizz_buzz - a program that prints fizz buzz
+ *
  * Return: Always 0 (Success)
  */
 
@@ -15,6 +15,10 @@ int main(void)
 	return (0);
 }
 
+/**
+ * print_fizz_buzz - a program that prints fizz buzz
+ */
+ 
 void print_fizz_buzz(void)
 {
 	int n;
