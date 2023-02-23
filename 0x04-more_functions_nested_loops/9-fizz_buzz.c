@@ -50,4 +50,5 @@ void print_fizz_buzz(void)
 			}
 		}
 	}
+	printf("\n");
 }
