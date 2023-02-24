@@ -1,10 +1,24 @@
 #include <stdio.h>
-#include "main.h"
+
+/**
+ * main - entry point of the program
+ *
+ * Return: Always 0 (Success)
+ */
+
+void print_fizz_buzz(void);
+
+int main(void)
+{
+	print_fizz_buzz();
+
+	return (0);
+}
 
 /**
  * print_fizz_buzz - a program that prints fizz buzz
-*/
-
+ */
+ 
 void print_fizz_buzz(void)
 {
 	int n;
