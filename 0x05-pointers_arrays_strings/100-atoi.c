@@ -6,18 +6,29 @@
  * _atoi - function that converts a string to an integer
  *
  * @s: The string to be converted
+ *
+ * Return: The converted integer value
  */
 int _atoi(char *s)
 {
-	int i;
+	int sign = 1;
+	unsigned int num = 0;
 
-	for (i = 0; i < n; i++)
+	while (*s)
 	{
-		printf("%d", a[i]);
-		if (i != n - 1)
+		if(*s == '-')
 		{
-			printf(", ");
+			sign = -sign;
 		}
+		if (*s >= '0' && *s <= '9')
+		{
+			num = num * 10 + (*s - '0');
+		}
+		if (num > 0 && (*s < '0' || *s > '9'))
+		{
+			break;
+		}
+		s++;
 	}
-	printf("\n");
+	return (num * sign);
 }
