@@ -12,10 +12,7 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	char final[100];
+	strcat(dest, src);
 
-	strcpy(final, src);
-	strcpy(final, dest);
-
-	printf("%s\n", final);
+	return (dest);
 }
