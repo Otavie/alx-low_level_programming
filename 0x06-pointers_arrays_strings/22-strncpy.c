@@ -13,17 +13,7 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *p = dest;
-	const char *q = src;
-	int i;
-
-	/* Copy the first n characters of src to dest */
-	for (i = 0; (i < n && *q != '\0'); i++)
-	{
-		*p = *q;
-		p++;
-		q++;
-	}
+	strncpy(dest, src, n);
 
 	return (dest);
 }
