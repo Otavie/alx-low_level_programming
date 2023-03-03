@@ -25,5 +25,12 @@ char *_strncpy(char *dest, char *src, int n)
 		q++;
 	}
 
+	/* If src is shorter than n, pad dest with null characters */
+	while (p - dest < n)
+	{
+		*p = '\0';
+		p++;
+	}
+
 	return (dest);
 }
