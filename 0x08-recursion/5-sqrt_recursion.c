@@ -9,9 +9,9 @@
  *
  * Return: The natural square root of num
  */
-int _sqrt_helper(int num, int low, int high)
+int _sqrt_helper(long int num, long int low, long int high)
 {
-	int mid, square;
+	long int mid, square;
 
 	if (low > high)
 		return (-1);
