@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("%s\n", "Arguments not complete");
+		return (1);
 	}
 
 	printf("%d\n", result);
