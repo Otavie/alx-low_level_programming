@@ -13,17 +13,23 @@ int main(int argc, char *argv[])
 	int coins = 0;
 
 	if (argc != 2)
+	{
 		printf("Error\n");
 		return (1);
+	}
 	cents = atoi(argv[1]);
 	if (cents < 0)
+	{
 		printf("0\n");
 		return (0);
+	}
 	while (cents > 0)
 	{
 		if (cents >= 20)
+		{
 			coins += cents / 20;
 			cents %= 20;
+		}
 		else if (cents >= 5)
 		{
 			coins += cents / 5;
@@ -40,6 +46,6 @@ int main(int argc, char *argv[])
 			cents = 0;
 		}
 	}
-	printf("%d\n", coins);
+	printf("%d\n", (coins - 1));
 	return (0);
 }
