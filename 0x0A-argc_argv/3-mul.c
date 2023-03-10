@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("%s\n", "Arguments not complete");
+		printf("%s\n", "Error");
 		return (1);
 	}
 
