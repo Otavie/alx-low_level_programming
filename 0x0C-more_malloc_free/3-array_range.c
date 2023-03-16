@@ -9,7 +9,7 @@
  *
  * Return: Pointer to the newly created array or NUL on failure
  */
-int *array_array(int min, int max)
+int *array_range(int min, int max)
 {
 	int *arr, i;
 
