@@ -3,11 +3,7 @@
 
 /**
  * print_all - Prints anything
- *
  * @format: A list of types of arguments passed to the function
- * c: char
- * i: integer
- * f: float
  * s: char * (if the string is NULL, orint (nil)
  *
  * Return: Void
@@ -22,7 +18,6 @@ void print_all(const char * const format, ...)
 
 	va_start(args_list, format);
 	i = 0;
-
 	while (format[i])
 	{
 		switch (format[i])
@@ -49,8 +44,6 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-
 	printf("\n");
-
 	va_end(args_list);
 }
