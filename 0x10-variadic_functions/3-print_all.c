@@ -21,17 +21,17 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				printf("%c", va_arg(args_list, int));
-				if (*(p + 1) != '\0' && (*(p + 1) == 'c' || *(p + 1) == 'i' || *(p + 1) == 'f' || *(p + 1) == 's'))
+				if (*(p + 1) != '\0' && (*(p + 1) == 'c' || *(p + 1) == 'i' || *(p + 1) == 'e' || *(p + 1) == 's'))
 					printf(", ");
 				break;
 			case 'i':
 				printf("%d", va_arg(args_list, int));
-				if (*(p + 1) != '\0' && (*(p + 1) == 'c' || *(p + 1) == 'i' || *(p + 1) == 'f' || *(p + 1) == 's'))
+				if (*(p + 1) != '\0' && (*(p + 1) == 'c' || *(p + 1) == 'i' || *(p + 1) == 'e' || *(p + 1) == 's'))
 					printf(", ");
 				break;
-			case 'f':
+			case 'e':
 				printf("%f", (float)va_arg(args_list, double));
-				if (*(p + 1) != '\0' && (*(p + 1) == 'c' || *(p + 1) == 'i' || *(p + 1) == 'f' || *(p + 1) == 's'))
+				if (*(p + 1) != '\0' && (*(p + 1) == 'c' || *(p + 1) == 'i' || *(p + 1) == 'e' || *(p + 1) == 's'))
 					printf(", ");
 				break;
 			case 's':
@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 				else
 					printf("%s", s);
-				if (*(p + 1) != '\0' && (*(p + 1) == 'c' || *(p + 1) == 'i' || *(p + 1) == 'f' || *(p + 1) == 's'))
+				if (*(p + 1) != '\0' && (*(p + 1) == 'c' || *(p + 1) == 'i' || *(p + 1) == 'e' || *(p + 1) == 's'))
 					printf(", ");
 				break;
 			default:
