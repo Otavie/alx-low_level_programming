@@ -1,15 +1,10 @@
-/*
- * File: 0-print_name.c
- * Auth: Otavie Loveday
- */
-
 #include <stddef.h>
 #include "function_pointers.h"
 
 /**
  * print_name - Prints a name
  *
- * @name: Pointer to the name to be printed
+ * @name: The name to be printed
  * @f: Pointer to the function to be used to print the name
  *
  */
