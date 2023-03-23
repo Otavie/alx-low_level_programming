@@ -14,9 +14,7 @@ void print_all(const char * const format, ...)
 	const char *p;
 	char *s;
 
-	i = 0;
 	va_start(args_list, format);
-
 	for (p = format; *p != '\0'; p++)
 	{
 		switch (*p)
@@ -38,8 +36,6 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				s = va_arg(args_list, char *);
-				if (*(p + 1) != '\0' && (*(p + 1) == 'c' || *(p + 1) == 'i' || *(p + 1) == 'f' || *(p + 1) == 's'))
-					printf(", ");
 				if (s == NULL)
 					printf("(nil)");
 				else
