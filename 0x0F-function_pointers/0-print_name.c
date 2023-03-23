@@ -2,7 +2,7 @@
 #include "function_pointers.h"
 
 /**
- * print_name - prints a name
+ * print_name - prints a name from a function pointer
  *
  * @name: the name to be printed
  * @f: function pointer that takes a string argument
