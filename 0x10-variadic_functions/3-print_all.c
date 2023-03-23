@@ -13,7 +13,10 @@ void print_all(const char * const format, ...)
 	va_list args_list;
 	const char *p;
 	char *s;
+	char c;
+	int i;
 
+	i = 0;
 	va_start(args_list, format);
 
 	for (p = format; *p != '\0'; p++)
@@ -37,11 +40,11 @@ void print_all(const char * const format, ...)
 					printf("%s", s);
 				break;
 			default:
-				break;
+				continue;
 		}
+		if (*(p + 1) != '\0' && (*p == 'c' || *p == 'i' || *p == 'f' || *p == 's'))
+			printf(", ");
 	}
-
 	printf("\n");
-
 	va_end(args_list);
 }
