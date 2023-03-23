@@ -1,3 +1,8 @@
+/*
+ * File: 0-print_name.c
+ * Auth: Otavie Loveday
+ */
+
 #include <stddef.h>
 #include "function_pointers.h"
 
