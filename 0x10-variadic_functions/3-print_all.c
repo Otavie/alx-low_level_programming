@@ -11,7 +11,7 @@ void print_char(va_list args, int *first_arg)
 {
 	char c = (char)va_arg(args, int);
 
-	if (!(*first_arg))
+	if ((*first_arg))
 		printf(", ");
 	printf("%c", c);
 }
@@ -26,7 +26,7 @@ void print_int(va_list args, int *first_arg)
 {
 	int i = va_arg(args, int);
 
-	if (!(*first_arg))
+	if ((*first_arg))
 		printf(", ");
 	printf("%d", i);
 }
@@ -41,7 +41,7 @@ void print_float(va_list args, int *first_arg)
 {
 	float f = (float)va_arg(args, double);
 
-	if (!(*first_arg))
+	if ((*first_arg))
 		printf(", ");
 	printf("%f", f);
 }
@@ -56,7 +56,7 @@ void print_string(va_list args, int *first_arg)
 {
 	char *s = va_arg(args, char *);
 
-	if (!(*first_arg))
+	if ((*first_arg))
 		printf(", ");
 	if (s == NULL)
 	{
