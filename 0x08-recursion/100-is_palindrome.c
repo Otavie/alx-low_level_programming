@@ -1,24 +1,37 @@
 #include "main.h"
-#include <string.h>
 
 /**
- * is_palindrome_helper - Recursive helper function to check for palindrome
+ * str_len - get the length of string recursively
  *
- * @s: The string to be checked
- * @start: The index of the start of the substring to check
- * @end: The index of the end of the substring to check
+ * @s: String
  *
- * Return: 1 if s is a palindrome, 0 otherwise
+ * Return: Length of s
  */
-int is_palindrome_helper(char *s, int start, int end)
+int str_len(char *s)
 {
-	if (start >= end)
-		return (1);
-
-	if (s[start] != s[end])
+	if (*s == '\0')
 		return (0);
+	else
+		return (1 + str_len(s + 1));
+}
 
-	return (is_palindrome_helper(s, start + 1, end - 1));
+/**
+ * is_palindrome_helper - Check if string is palindrome recursively
+ *
+ * @s: String to be checked
+ * @len: Length of the string
+ * @i: Index
+ *
+ * Return: 1 if palindrome, otherwise 0
+ */
+int is_palindrome_helper(char *s, int len, int i)
+{
+	if (i >= len / 2)
+		return (1);
+	else if (s[i] != s[len - i - 1])
+		return (0);
+	else
+		return (is_palindrome_helper(s, len, i + 1));
 }
 
 /**
@@ -32,9 +45,9 @@ int is_palindrome(char *s)
 {
 	int len;
 
-	len = 0;
+	len = str_len(s);
 	if (len <= 1)
 		return (1);
 
-	return (is_palindrome_helper(s, 0, len - 1));
+	return (is_palindrome_helper(s, len, 0));
 }
