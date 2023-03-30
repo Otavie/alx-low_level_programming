@@ -2,6 +2,26 @@
 #include <string.h>
 
 /**
+ * count_words - Count the number of words in a string
+ *
+ * @str: String to count words in
+ *
+ * Return: Number of words in string
+ */
+int count_words(char *str)
+{
+	int i, count;
+
+	count = 0;
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
+			count++;
+	}
+	return (count);
+}
+
+/**
  * strtow - Splits a string into words
  *
  * @str: String to split
@@ -16,12 +36,7 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	len = strlen(str);
-	wordcount = 0;
-	for (i = 0; i < len; i++)
-	{
-		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
-			wordcount++;
-	}
+	wordcount = count_words(str);
 	words = malloc(sizeof(char *) * (wordcount + 1));
 	if (words == NULL)
 		return (NULL);
