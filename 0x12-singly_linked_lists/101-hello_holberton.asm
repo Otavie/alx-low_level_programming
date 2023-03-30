@@ -1,6 +1,6 @@
 section .data
 	hello db "Hello, Holberton", 0
-	fmt db "Hello, Holberton\n", 0 ; Modified format string
+	fmt db "Hello, Holberton\n", 0
 
 section .text
 	global main
