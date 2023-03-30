@@ -6,6 +6,7 @@
  * print_char - Prints a character argument
  *
  * @args: List of arguments
+ *
  * @first_arg: Pointer to a flag indicating if this is the first argument
  */
 void print_char(va_list args, int *first_arg)
@@ -24,6 +25,7 @@ void print_char(va_list args, int *first_arg)
  * print_int - Prints an integer arguments
  *
  * @args: List arguments
+ *
  * @first_arg: Pointer to a flag indicating if this is the first argument
  */
 void print_int(va_list args, int *first_arg)
@@ -42,6 +44,7 @@ void print_int(va_list args, int *first_arg)
  * print_float - Prints a floating-point argument
  *
  * @args: List of arguments
+ *
  * @first_arg: Pointer to a flag indicating if this is the first argument
  */
 void print_float(va_list args, int *first_arg)
@@ -60,6 +63,7 @@ void print_float(va_list args, int *first_arg)
  * print_string - Prints a string argument
  *
  * @args: List of arguments
+ *
  * @first_arg: Pointer to a flag indicating if this is the first argument
  */
 void print_string(va_list args, int *first_arg)
