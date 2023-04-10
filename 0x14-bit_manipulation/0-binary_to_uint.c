@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * binary_to_unit - Convert a binary number to an unsigned int
+ * binary_to_uint - Convert a binary number to an unsigned int
  *
  * @b: A string of 0 or 1 chars.
  *
