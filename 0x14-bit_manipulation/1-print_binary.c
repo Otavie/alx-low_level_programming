@@ -9,25 +9,28 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int mask;
-	int printed;
+	int started;
 
 	mask = 1ul << (sizeof(unsigned long int) * 8 - 1);
-	printed = 0;
+	started = 0;
+
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
 
 	while (mask > 0)
 	{
-		if ((n & mask) == 0)
-		{
-			if (printed)
-				_putchar('1');
-		}
-		else
+		if ((n & mask) == mask)
 		{
 			_putchar('1');
-			printed = 1;
+			started = 1;
+		}
+		else if (started)
+		{
+			_putchar('0');
 		}
 		mask >>= 1;
 	}
-	if (!printed)
-		_putchar('0');
 }
