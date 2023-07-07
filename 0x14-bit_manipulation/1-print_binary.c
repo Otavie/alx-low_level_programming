@@ -7,7 +7,19 @@
  */
 void print_binary(unsigned long int n)
 {
-	if (n > 1)
-		print_binary(n >> 1);
-	printf("%lu", n & 1);
+	int num_bits;
+	unsigned long int mask;
+	int i;
+
+	num_bits = sizeof(unsigned long int) * 8;
+	mask = (unsigned long int) 1 << (num_bits - 1);
+
+	for (i = 0; i < num_bits; i++)
+	{
+		if (n & mask)
+			_putchar('1');
+		_putchar('0');
+
+		mask >>= 1
+	}
 }
