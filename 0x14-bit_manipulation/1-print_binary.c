@@ -7,12 +7,11 @@
  */
 void print_binary(unsigned long int n)
 {
-	int num_bits;
+	int started;
 	unsigned long int mask;
-	int i;
 
-	num_bits = sizeof(unsigned long int) * 8;
-	mask = 1ul << (num_bits - 1);
+	mask = 1ul << (sizeof(unsigned long int) * 8 - 1);
+	started = 0;
 
 	if (n == 0)
 	{
@@ -20,11 +19,15 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (i = 0; i < num_bits; i++)
+	while (mask > 0)
 	{
-		if (n & mask)
+		if ((n & mask) == mask)
+		{
 			_putchar('1');
-		_putchar('0');
+			started = 1;
+		}
+		else if (started)
+			_putchar('0');
 
 		mask >>= 1;
 	}
