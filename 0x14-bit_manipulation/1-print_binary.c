@@ -14,6 +14,12 @@ void print_binary(unsigned long int n)
 	num_bits = sizeof(unsigned long int) * 8;
 	mask = 1ul << (num_bits - 1);
 
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
+
 	for (i = 0; i < num_bits; i++)
 	{
 		if (n & mask)
