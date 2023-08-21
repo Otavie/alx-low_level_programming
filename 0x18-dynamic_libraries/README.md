@@ -69,7 +69,7 @@ File:
 
 2. Navigate to the repository directory:
    ```
-   cd dynamic-library-repo
+   cd 0x18-dynamic_libraries
    ```
 
 3. Follow the instructions in each task to complete the requirements.
