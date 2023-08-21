@@ -1,0 +1,466 @@
+#include "main.h"
+#include <unistd.h>
+#include <stddef.h>
+
+/**
+ * _putchar - writes a character to the standard output
+ * @c: the character to print
+ *
+ * Return: On success 1, on error -1 is returned
+*/
+
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
+/**
+ * _islower - a program that checks for lowercase character.*
+ * @c: The character to check.
+ * Return: 1 if the character is lowercase, 0 otherwise.
+ */
+int _islower(int c)
+{
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
+ * _isalpha - a program that checks for alphabet
+ * @c: The character to check.
+ * Return: 1 if the character is lowercase or uppercase, 0 otherwise.
+ */
+int _isalpha(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
+ * _abs - a function that computes the absolute value of an integer.
+ * @n: The number to check.
+ * Return: Always 0 (Success).
+ */
+int _abs(int n)
+{
+	if (n < 0)
+	{
+		return (-n);
+	}
+	else
+	{
+		return (n);
+	}
+
+	return (0);
+}
+
+/**
+ * _isupper - a program that checks for uppercase character
+ * @c: character to be checked
+ * Return: 1 if the character is uppercase, 0 otherwise
+ */
+int _isupper(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
+ * _isdigit - a program that checks for a digit (0 through 9)
+ * @c: character to be checked
+ * Return: 1 if digit, 0 otherwise
+ */
+int _isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
+ * _strlen - a function that returns the legth of a string
+ *
+ * @s: The string to be checked
+ *
+ * Return: Always 0.
+ */
+int _strlen(char *s)
+{
+	return (strlen(s));
+}
+
+/**
+ * _puts - Prints a string to stdout
+ * @str: The string to be printed
+ *
+ * Return: The number of the characters printed
+ */
+int _puts(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+	}
+
+	return (i);
+}
+
+/**
+ * _strcpy - copies the string pointed by src to buffer pointed by dest
+ *
+ * @src: The source string to be copied
+ * @dest: Destinationatio buffer
+ *
+ * Return: A pointer to the destination string
+ */
+char *_strcpy(char *dest, char *src)
+{
+	char *dest_start = dest;
+
+	while (*src != '\0')
+	{
+		*dest = *src;
+		src++;
+		dest++;
+	}
+	*dest = '\0';
+
+	return (dest_start);
+}
+
+/**
+ * _atoi - function that converts a string to an integer
+ *
+ * @s: The string to be converted
+ *
+ * Return: The converted integer value
+ */
+int _atoi(char *s)
+{
+	int sign = 1;
+	unsigned int num = 0;
+
+	while (*s)
+	{
+		if (*s == '-')
+		{
+			sign = -sign;
+		}
+		if (*s >= '0' && *s <= '9')
+		{
+			num = num * 10 + (*s - '0');
+		}
+		if (num > 0 && (*s < '0' || *s > '9'))
+		{
+			break;
+		}
+		s++;
+	}
+	return (num * sign);
+}
+
+/**
+ * *_strcat - function that concatenates two strings
+ *
+ * @src: The source string
+ * @dest: The destinnation string
+ *
+ * Return: dest
+ */
+char *_strcat(char *dest, char *src)
+{
+	char *p = dest;
+
+	while (*p != '\0')
+	{
+		p++;
+	}
+
+	while (*src != '\0')
+	{
+		*p = *src;
+		p++;
+		src++;
+	}
+	*p = '\0';
+
+	return (dest);
+}
+
+/**
+ * *_strncat - function that concatenates two strings up to n bytes
+ *
+ * @src: The source string
+ * @dest: The destinnation string
+ * @n: The maximum number of bytes to copy from
+ *
+ * Return: dest
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	char *p = dest;
+	const char *q = src;
+
+	/* Find the end of the destination string */
+	while (*p != '\0')
+	{
+		p++;
+	}
+
+	/* Append up to n bytes from the source string */
+	while (*q != '\0' && n--)
+	{
+		*p++ = *q++;
+	}
+	*p = '\0';
+
+	return (dest);
+}
+
+/**
+ * *_strncpy - function that copies a strings
+ *
+ * @src: The source string
+ * @dest: The destinnation string
+ * @n: Number of bytes to be copied from src
+ *
+ * Return: dest
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+	char *p = dest;
+	const char *q = src;
+	int i;
+
+	/* Copy the first n characters of src to dest */
+	for (i = 0; (i < n && *q != '\0'); i++)
+	{
+		*p = *q;
+		p++;
+		q++;
+	}
+
+	/* If src is shorter than n, pad dest with null characters */
+	while (p - dest < n)
+	{
+		*p = '\0';
+		p++;
+	}
+
+	return (dest);
+}
+
+/**
+ * *_strcmp - function that compares two strings
+ *
+ * @s1: The first string
+ * @s2: The second string
+ *
+ * Return: Integer that indicates the result of the comparison
+ */
+int _strcmp(char *s1, char *s2)
+{
+	int i;
+
+	for (i = 0; s1[i] == s2[i]; i++)
+	{
+		if (s1[i] == '\0')
+		{
+			return (0);
+		}
+	}
+	return (s1[i] - s2[i]);
+}
+
+/**
+ * _memset - a function that fills memory with a constant byte
+ *
+ * @s: The pointer to the block of memory
+ * @b: The value to be set
+ * @n: The number of bytes to be set to the specified value
+ *
+ * Return: s
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	char *ptr = s;
+
+	while (n--)
+	{
+		*ptr++ = b;
+	}
+
+	return (s);
+}
+
+/**
+ * _memcpy - a function that copies n bytes to a dest mem
+ *
+ * @dest: The pointer to the destination where the datat is copied
+ * @src: The pointer to the source where data is copied from
+ * @n: The number of bytes to be copied
+ *
+ * Return: dest
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
+	char *ptr_dest = dest;
+	char *ptr_src = src;
+
+	for (i = 0; i < n; i++)
+	{
+		ptr_dest[i] = ptr_src[i];
+	}
+
+	return (dest);
+}
+
+/**
+ * _strchr - locate a character in a string
+ *
+ * @s: The string to search
+ * @c: The character to locate
+ *
+ * Return: A pointer to the NULL terminating string
+ */
+char *_strchr(char *s, char c)
+{
+	while (*s != '\0')
+	{
+		if (*s == c)
+		{
+			return (s);
+		}
+		s++;
+	}
+	if (*s == c)
+	{
+		return (s);
+	}
+
+	return (NULL);
+}
+
+/**
+ * _strspn - get the length of a prefix substring
+ *
+ * @s: The string to check
+ * @accept: A set of character to check against
+ *
+ * Return: Number of bytes in the initial seg of s
+ */
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int len = 0;
+	char *p;
+
+	while (*s != '\0')
+	{
+		for (p = accept; *p != '\0'; p++)
+		{
+			if (*s == *p)
+			{
+				len++;
+				break;
+			}
+		}
+		if (*p == '\0')
+		{
+			break;
+		}
+		s++;
+	}
+
+	return (len);
+}
+
+/**
+ * _strpbrk - searches a string for any of a set of bytes
+ *
+ * @s: The string to search
+ * @accept: A set of bytes to search for
+ *
+ * Return: Pointer tohe byte in s that matches the one in accept
+ */
+
+char *_strpbrk(char *s, char *accept)
+{
+	char *p_accept;
+
+	while (*s)
+	{
+		for (p_accept = accept; *p_accept; p_accept++)
+		{
+			if (*s == *p_accept)
+			{
+				return (s);
+			}
+		}
+		s++;
+	}
+
+	return (NULL);
+}
+
+/**
+ * _strstr - locate a substring
+ *
+ * @haystack: The string to search
+ * @needle: Substring to find
+ *
+ * Return: Pointer to the beginning of the located substring or NULL
+ */
+
+char *_strstr(char *haystack, char *needle)
+{
+	char *start, *p_needle;
+
+	while (*haystack)
+	{
+		start = haystack;
+		p_needle = needle;
+
+		while (*p_needle && *p_needle == *haystack)
+		{
+			haystack++;
+			p_needle++;
+		}
+
+		if (*p_needle == '\0')
+		{
+			return (start);
+		}
+
+		haystack = start + 1;
+	}
+
+	return (NULL);
+}
