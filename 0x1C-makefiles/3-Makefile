@@ -1,0 +1,26 @@
+# Variables
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o) 
+NAME = school
+RM = rm -f
+
+%.o: %.c m.h
+	$(CC) -c -o $@ $<
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+
+clean:
+	$(RM) $(OBJ) *~*.exe
+
+
+oclean:
+	$(RM) $(OBJ)
+
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
