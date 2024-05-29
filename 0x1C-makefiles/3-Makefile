@@ -11,7 +11,7 @@ RM = rm -f
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-
+.phony: clean oclean fclean re all
 clean:
 	$(RM) $(OBJ) *~*.exe
 
