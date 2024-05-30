@@ -6,7 +6,7 @@ NAME = school
 RM = rm -f
 
 %.o:%.c m.h
-i	$(CC) -c $< -o $@
+	$(CC) -c $< -o $@
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
