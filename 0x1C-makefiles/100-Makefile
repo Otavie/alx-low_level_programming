@@ -1,7 +1,7 @@
 # Variables
 CC = gcc
 SRC = $(wildcard *.c)
-OBJ = $(SRC:%.c=%.o) 
+OBJ = $(patsubst %.c, %.o, $(SRC))
 NAME = school
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
