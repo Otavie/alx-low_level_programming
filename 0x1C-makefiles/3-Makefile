@@ -5,13 +5,14 @@ OBJ = $(SRC:%.c=%.o)
 NAME = school
 RM = rm -f
 
+.PHONY: clean oclean fclean re
+
 %.o:%.c m.h
 	$(CC) -c $< -o $@
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-.PHONY: clean oclean fclean re
 clean:
 	$(RM) *~ $(NAME)
 
