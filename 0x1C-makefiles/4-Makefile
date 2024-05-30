@@ -9,10 +9,10 @@ CFLAG = -Wall -Werror -Wextra -pedantic
 .PHONY: clean oclean fclean re
 
 %.o:%.c m.h
-	$(CC) -c $< -o $@
+	$(CC) $(CFLAG) -c $< -o $@
 
 all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAG) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) *~ $(NAME)
