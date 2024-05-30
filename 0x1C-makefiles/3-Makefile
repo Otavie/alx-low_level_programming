@@ -8,13 +8,13 @@ RM = rm -f
 .PHONY: all clean oclean fclean re
 
 %.o:%.c m.h
-	$(CC) -c $< -o $@
+i	$(CC) -c $< -o $@
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) $(OBJ) *~*.exe
+	$(RM) $(OBJ) *~
 
 
 oclean:
