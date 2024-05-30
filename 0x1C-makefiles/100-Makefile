@@ -3,7 +3,6 @@ CC = gcc
 SRC = $(wildcard *.c)
 OBJ = $(patsubst %.c, %.o, $(SRC))
 NAME = school
-RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 .PHONY: clean oclean fclean re
