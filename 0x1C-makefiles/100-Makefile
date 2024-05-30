@@ -1,6 +1,6 @@
 # Variables
 CC = gcc
-SRC = main.c school.c
+SRC = $(wildcard *.c)
 OBJ = $(SRC:%.c=%.o) 
 NAME = school
 RM = rm -f
