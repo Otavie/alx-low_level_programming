@@ -1,7 +1,7 @@
 # Variables
 CC = gcc
 SRC = main.c school.c
-OBJ = $(SRC:.c=.o) 
+OBJ = $(SRC:%.c=%.o) 
 NAME = school
 RM = rm -f
 
@@ -21,7 +21,6 @@ oclean:
 	$(RM) $(OBJ)
 
 
-fclean: clean
-	$(RM) $(NAME) $(OBJ)
+fclean: clean oclean
 
-re: oclean all
+re: fclean all
