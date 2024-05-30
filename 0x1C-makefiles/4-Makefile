@@ -1,25 +1,25 @@
 # Variables
 CC = gcc
 SRC = main.c school.c
-OBJ = $(SRC:.c=.o) 
+OBJ = $(SRC:%.c=%.o) 
 NAME = school
 RM = rm -f
-CFLAGS = -Wall -Werror -Wextra -pedantic
+CFLAG = -Wall -Werror -Wextra -pedantic
 
-.PHONY: all clean oclean fclean re
+.PHONY: clean oclean fclean re
+
+%.o:%.c m.h
+	$(CC) -c $< -o $@
 
 all: $(OBJ)
-	$(CC) $(CFLAG) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) $(OBJ) *~*.exe
-
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
 
+fclean: clean oclean
 
-fclean: clean
-	$(RM) $(NAME) $(OBJ)
-
-re: oclean all
+re: fclean all
