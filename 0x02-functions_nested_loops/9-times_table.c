@@ -3,7 +3,6 @@
 
 /**
  * times_table - a function that prints the 9 times table.
- * Return: Always 0 (Success).
  */
 void times_table(void)
 {
@@ -15,13 +14,13 @@ void times_table(void)
 		{
 			result = x * y;
 
-			if (result < 10)
+			if (y == 0)
 			{
-				printf(" %d ", result);
+				printf("%d", result);
 			}
 			else
 			{
-				printf("%d,  ", result);
+				printf(", %2d", result);
 			}
 		}
 		printf("\n");
