@@ -3,13 +3,13 @@
 #include "lists.h"
 
 /**
- * add_dnodeint - Adds a new node at the begiining of a dlistint_t.
+ * add_dnodeint_end - Adds a new node at the end of a dlistint_t.
  * @head: Double pointer to the head of the list
  * @n: The data to be added to the new node.
  *
  * Return: The address of the new element, or NULL if it failed.
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new_node;
 
