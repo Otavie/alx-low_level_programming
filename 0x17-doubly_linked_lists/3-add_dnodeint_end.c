@@ -15,18 +15,15 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 
 	/* Memory allocation to the new node */
 	new_node = malloc(sizeof(dlistint_t));
+
 	if (new_node == NULL)
 		return (NULL);
 
 	/* Initialize the new node */
-	new_node->n = n;
-	new_node->prev = NULL;
-	new_node->next = *head;
-
-	if (*head != NULL)
-		(*head)->prev = new_node;
-
-	*head = new_node;
+	if (new_node->next == NULL)
+	{
+		new_node->n = n;
+		return (new_node);
 
 	return (new_node);
 }
