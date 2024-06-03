@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -18,7 +17,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (!head || !(*head))
 		return (-1);
 
-	if (idx == 0)
+	if (index == 0)
 	{
 		*head = current->next;
 		if (current->next)
