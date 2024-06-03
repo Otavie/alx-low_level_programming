@@ -15,33 +15,26 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *current = *head;
 	unsigned int i = 0;
 
-	new_node = malloc(sizeof(dlistint_t));
-	if (!new_node)
-		return (NULL);
-
-	new_node->n = n;
+	if (!head || !(*head))
+		return (-1);
 
 	if (idx == 0)
 	{
-		new_node->next = *h;
-		new_node->prev = NULL;
-		if (*h)
-			(*h)->prev = new_node;
-		*h = new_node;
-		return (new_node);
+		*head = current->next;
+		if (current->next)
+			current->next->prev = NULL;
+		free(current);
+		return (1);
 	}
 
-	while (current && i < idx - 1)
+	while (current && i < index)
 	{
 		current = current->next;
 		i++;
 	}
 
-	if (!current || (i != idx - 1))
-	{
-		free(new_node);
-		return (NULL);
-	}
+	if (!current)
+		return (-1);
 
 	/* Insert new node at a given position */
 	new_node->next = current->next;
@@ -50,5 +43,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		current->next->prev = new_node;
 	current->next = new_node;
 
-	return (new_node);
+	free(current);
+	return (1);
 }
