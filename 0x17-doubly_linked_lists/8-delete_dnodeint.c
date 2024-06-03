@@ -36,12 +36,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (!current)
 		return (-1);
 
-	/* Insert new node at a given position */
-	new_node->next = current->next;
-	new_node->prev = current;
 	if (current->next)
-		current->next->prev = new_node;
-	current->next = new_node;
+		current->next->prev = current->prev;
+	if (current->prev)
+		current->prev->next = current->next;
 
 	free(current);
 	return (1);
