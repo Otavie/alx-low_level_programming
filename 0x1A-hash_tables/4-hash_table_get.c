@@ -12,7 +12,7 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int index;
-	hash_node_ *current_node;
+	hash_node_t *current_node;
 
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
